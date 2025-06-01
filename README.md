@@ -67,7 +67,6 @@ qemu-img create -f qcow2 /path/to/qemu_image.qcow2 10G
 3. Configurați imaginea QEMU:
 - Instalați un sistem de operare Linux în imagine
 - Configurați SSH
-- Setați parola root la '0944' (sau modificați în cod)
 
 ## Configurare
 
