@@ -4,7 +4,7 @@ import subprocess
 import time
 from mininet.topo import Topo
 from mininet.node import Node, Switch, Intf
-from mininet.log import setLogLevel, info
+from logging_config import info, debug, error
 from mininet.link import TCLink
 
 # Define the base QEMU image path
@@ -194,6 +194,18 @@ class QemuHost(Node):
                 if "SSH_OK" in result.stdout:
                     info(f"*** [{self.name}] SSH connection to {self.qemu_ip}:{self.ssh_host_port} successful!\n")
                     self.booted = True
+                    # Install iperf after successful SSH connection
+                    try:
+                        install_cmd = 'apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y iperf'
+                        subprocess.run(
+                            ['sshpass', '-p', '0944', 'ssh', '-o', 'StrictHostKeyChecking=no',
+                             '-o', 'UserKnownHostsFile=/dev/null', '-o', 'LogLevel=ERROR',
+                             '-p', str(self.ssh_host_port), f'root@{self.qemu_ip}', install_cmd],
+                            capture_output=True, text=True, check=True, timeout=60
+                        )
+                        info(f"*** [{self.name}] Successfully installed iperf\n")
+                    except Exception as e:
+                        info(f"*** [{self.name}] Failed to install iperf: {e}\n")
                     return True
             except subprocess.CalledProcessError as e:
                 if not any(err_msg in e.stderr for err_msg in ["Connection refused", "Connection reset by peer", "kex_exchange_identification", "Connection timed out during banner exchange"]):
@@ -250,6 +262,7 @@ class QemuHost(Node):
         
         # Case 3: Send command to VM via SSH (if booted)
         if self.booted:
+            # Only log the command once
             info(f"*** [{self.name}] QemuHost.cmd (to VM via SSH): '{command_to_ssh}'\n")
             ssh_cmd_list = ['sshpass', '-p', '0944', 'ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-o', 'LogLevel=ERROR', '-o', 'ConnectTimeout=10', '-p', str(self.ssh_host_port), f'root@{self.qemu_ip}', command_to_ssh]
             try:
@@ -282,7 +295,7 @@ class QemuHost(Node):
         else:
             cmd_list = list(args)
         
-        info(f"*** [{self.name}] QemuHost.pexec: Running as blocking cmd: '{' '.join(cmd_list)}'\n")
+        # Remove duplicate logging since cmd() already does it
         return self.cmd(*cmd_list, want_tuple=True, **kwargs)
 
     def setIP(self, ip_with_prefix, intf=None, defaultRoute=None):

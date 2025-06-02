@@ -1,0 +1,309 @@
+2025-06-02 21:49:58,164 - root - INFO - *** Starting Experiment: topology_basic_lan.BasicLanTopo ***
+
+2025-06-02 21:49:58,178 - root - INFO - *** Open vSwitch is running.
+
+2025-06-02 21:49:58,182 - root - INFO - *** Building network topology
+
+2025-06-02 21:49:58,198 - root - INFO - *** [q1] VM not booted. Command 'unset HISTFILE; stty -echo; set +m' IGNORED.
+
+2025-06-02 21:49:58,213 - root - INFO - *** [q2] VM not booted. Command 'unset HISTFILE; stty -echo; set +m' IGNORED.
+
+2025-06-02 21:49:58,241 - mininet - WARNING - *** defaultIntf: warning: q1 has no interfaces
+
+2025-06-02 21:49:58,241 - root - INFO - *** [q1] QemuHost: Mininet config() call. MAC=None, IP=None, defaultRoute=None
+
+2025-06-02 21:49:58,241 - root - INFO - *** [q1] QemuHost: VM not booted, ignoring 'ifconfig lo up' during Mininet config().
+
+2025-06-02 21:49:58,241 - mininet - WARNING - *** defaultIntf: warning: q2 has no interfaces
+
+2025-06-02 21:49:58,241 - root - INFO - *** [q2] QemuHost: Mininet config() call. MAC=None, IP=None, defaultRoute=None
+
+2025-06-02 21:49:58,242 - root - INFO - *** [q2] QemuHost: VM not booted, ignoring 'ifconfig lo up' during Mininet config().
+
+2025-06-02 21:49:58,242 - root - INFO - *** Starting network (switches, controllers)
+
+2025-06-02 21:49:58,242 - root - INFO - *** [s1] QemuSwitch: Starting OVS bridge s1
+
+2025-06-02 21:49:58,341 - root - INFO - *** [s1] QemuSwitch.start: Skipping 'lo' interface.
+
+2025-06-02 21:49:58,341 - root - INFO - *** [s1] QemuSwitch: OVS bridge s1 started and interfaces processed.
+
+2025-06-02 21:49:58,342 - root - INFO - *** Starting QEMU hosts...
+
+2025-06-02 21:49:58,342 - root - INFO - *** Starting QEMU for q1 (TAP on s1)...
+
+2025-06-02 21:49:58,342 - root - INFO - *** [q1] Starting QEMU setup...
+
+2025-06-02 21:49:58,342 - root - INFO - *** [q1] Creating overlay image /tmp/qemu_basic1_overlay.qcow2 from /home/shogun/Licenta/imagine_qemu/qemu_image.qcow2
+
+2025-06-02 21:49:58,347 - root - INFO - *** [q1] Setting up TAP interface tapb1
+
+2025-06-02 21:49:58,463 - root - INFO - *** [q1] TAP tapb1 added to OVS bridge s1 imediat după creare.
+
+2025-06-02 21:49:58,463 - root - INFO - *** [q1] Starting QEMU: sudo qemu-system-x86_64 -daemonize -m 512 -hda /tmp/qemu_basic1_overlay.qcow2 -netdev user,id=netmgmt,hostfwd=tcp::2211-:22 -device e1000,netdev=netmgmt,mac=52:54:00:12:35:b1 -netdev tap,id=netexp,ifname=tapb1,script=no,downscript=no -device e1000,netdev=netexp,mac=52:54:00:B4:51:10 -pidfile /tmp/q1.pid
+
+2025-06-02 21:49:59,464 - root - INFO - *** [q1] Waiting for SSH on 127.0.0.1:2211 (up to 60 seconds)...
+
+2025-06-02 21:50:46,943 - root - INFO - *** [q1] SSH connection to 127.0.0.1:2211 successful!
+
+2025-06-02 21:51:46,995 - root - INFO - *** [q1] Failed to install iperf: Command '['sshpass', '-p', '0944', 'ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-o', 'LogLevel=ERROR', '-p', '2211', 'root@127.0.0.1', 'apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y iperf']' timed out after 60 seconds
+
+2025-06-02 21:51:46,995 - root - INFO - *** Starting QEMU for q2 (TAP on s1)...
+
+2025-06-02 21:51:46,995 - root - INFO - *** [q2] Starting QEMU setup...
+
+2025-06-02 21:51:46,995 - root - INFO - *** [q2] Creating overlay image /tmp/qemu_basic2_overlay.qcow2 from /home/shogun/Licenta/imagine_qemu/qemu_image.qcow2
+
+2025-06-02 21:51:47,002 - root - INFO - *** [q2] Setting up TAP interface tapb2
+
+2025-06-02 21:51:47,134 - root - INFO - *** [q2] TAP tapb2 added to OVS bridge s1 imediat după creare.
+
+2025-06-02 21:51:47,134 - root - INFO - *** [q2] Starting QEMU: sudo qemu-system-x86_64 -daemonize -m 512 -hda /tmp/qemu_basic2_overlay.qcow2 -netdev user,id=netmgmt,hostfwd=tcp::2212-:22 -device e1000,netdev=netmgmt,mac=52:54:00:12:35:b2 -netdev tap,id=netexp,ifname=tapb2,script=no,downscript=no -device e1000,netdev=netexp,mac=52:54:00:B4:51:11 -pidfile /tmp/q2.pid
+
+2025-06-02 21:51:48,134 - root - INFO - *** [q2] Waiting for SSH on 127.0.0.1:2212 (up to 60 seconds)...
+
+2025-06-02 21:52:38,253 - root - INFO - *** [q2] SSH connection to 127.0.0.1:2212 successful!
+
+2025-06-02 21:53:38,299 - root - INFO - *** [q2] Failed to install iperf: Command '['sshpass', '-p', '0944', 'ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-o', 'LogLevel=ERROR', '-p', '2212', 'root@127.0.0.1', 'apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y iperf']' timed out after 60 seconds
+
+2025-06-02 21:53:38,299 - root - INFO - *** Configuring IPs, routes, and firewall in VMs...
+
+2025-06-02 21:53:38,299 - root - INFO - --- Configuring q1 ---
+2025-06-02 21:53:38,299 - root - INFO - *** [q1] Attempting to set IP 10.0.0.10/24 on VM interface ens4
+
+2025-06-02 21:53:38,299 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): '/sbin/ip link show ens4'
+
+2025-06-02 21:53:46,373 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): '/sbin/ip addr flush dev ens4'
+
+2025-06-02 21:53:51,031 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): '/sbin/ip addr add 10.0.0.10/24 dev ens4'
+
+2025-06-02 21:53:55,157 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): '/sbin/ip link set ens4 up'
+
+2025-06-02 21:53:59,201 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): '/sbin/ip -4 addr show ens4 | grep 'inet 10.0.0.10/''
+
+2025-06-02 21:54:03,228 - root - INFO - *** [q1] IP 10.0.0.10/24 successfully set and verified on ens4.
+
+2025-06-02 21:54:03,228 - root - INFO - *** q1 IP set to 10.0.0.10/24, GW to None (if provided)
+
+2025-06-02 21:54:03,228 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'ip link set ens4 up'
+
+2025-06-02 21:54:07,452 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'ethtool -K ens4 gro off gso off tso off ufo off'
+
+2025-06-02 21:54:11,462 - root - INFO - *** [q1] Disabled offloading on ens4
+
+2025-06-02 21:54:11,462 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'iptables -F; iptables -P INPUT ACCEPT; iptables -P FORWARD ACCEPT; iptables -P OUTPUT ACCEPT'
+
+2025-06-02 21:54:15,710 - root - INFO - *** [q1] Set iptables to ACCEPT on q1
+
+2025-06-02 21:54:15,710 - root - INFO - --- Configuring q2 ---
+2025-06-02 21:54:15,710 - root - INFO - *** [q2] Attempting to set IP 10.0.0.11/24 on VM interface ens4
+
+2025-06-02 21:54:15,710 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): '/sbin/ip link show ens4'
+
+2025-06-02 21:54:30,152 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): '/sbin/ip addr flush dev ens4'
+
+2025-06-02 21:54:34,986 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): '/sbin/ip addr add 10.0.0.11/24 dev ens4'
+
+2025-06-02 21:54:39,733 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): '/sbin/ip link set ens4 up'
+
+2025-06-02 21:54:47,315 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): '/sbin/ip -4 addr show ens4 | grep 'inet 10.0.0.11/''
+
+2025-06-02 21:54:52,764 - root - INFO - *** [q2] IP 10.0.0.11/24 successfully set and verified on ens4.
+
+2025-06-02 21:54:52,764 - root - INFO - *** q2 IP set to 10.0.0.11/24, GW to None (if provided)
+
+2025-06-02 21:54:52,764 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'ip link set ens4 up'
+
+2025-06-02 21:54:59,017 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'ethtool -K ens4 gro off gso off tso off ufo off'
+
+2025-06-02 21:55:04,192 - root - INFO - *** [q2] Disabled offloading on ens4
+
+2025-06-02 21:55:04,192 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'iptables -F; iptables -P INPUT ACCEPT; iptables -P FORWARD ACCEPT; iptables -P OUTPUT ACCEPT'
+
+2025-06-02 21:55:10,600 - root - INFO - *** [q2] Set iptables to ACCEPT on q2
+
+2025-06-02 21:55:10,600 - root - INFO - *** Creating common /etc/hosts file for all nodes
+
+2025-06-02 21:55:10,601 - root - INFO - *** Created common hosts file at /tmp/mininet_hosts:
+127.0.0.1   localhost
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+# QEMU VM Data Plane IPs
+10.0.0.10	q1
+10.0.0.11	q2
+
+# Router Interface IPs
+
+# End of Mininet host entries
+
+2025-06-02 21:55:10,601 - root - INFO - *** Updating /etc/hosts in VMs for name resolution
+
+2025-06-02 21:55:10,601 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'touch /etc/hosts && chmod 644 /etc/hosts'
+
+2025-06-02 21:55:30,870 - root - INFO - *** [q1] Successfully copied hosts file to VM
+
+2025-06-02 21:55:30,870 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'touch /etc/hosts && chmod 644 /etc/hosts'
+
+2025-06-02 21:55:55,755 - root - INFO - *** [q2] Timeout copying hosts file via SCP.
+
+2025-06-02 21:55:57,755 - root - INFO - *** Testing initial connectivity to gateways (if applicable)...
+
+2025-06-02 21:55:57,755 - root - INFO - *** Testing q1 <-> q2 (same LAN)
+
+2025-06-02 21:55:57,761 - root - INFO - *** [q1] QemuHost.cmd: Translated ping 'ping -c 2 -W 2 q2' to 'ping -c 2 -W 2 10.0.0.11'
+
+2025-06-02 21:55:57,761 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'ping -c 2 -W 2 10.0.0.11'
+
+2025-06-02 21:56:09,910 - root - INFO - *** q1 ping q2: SUCCESSFUL
+PING 10.0.0.11 (10.0.0.11) 56(84) bytes of data.
+64 bytes from 10.0.0.11: icmp_seq=1 ttl=64 time=4.37 ms
+64 bytes from 10.0.0.11: icmp_seq=2 ttl=64 time=0.542 ms
+
+--- 10.0.0.11 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.542/2.458/4.374/1.916 ms
+
+2025-06-02 21:56:09,910 - root - INFO - 
+=== Latency Tests (ping) ===
+2025-06-02 21:56:09,911 - root - INFO - Testing latency: q1 -> q2
+2025-06-02 21:56:09,911 - root - INFO - *** [q1] QemuHost.cmd: Translated ping 'ping -c 5 -W 1 q2' to 'ping -c 5 -W 1 10.0.0.11'
+
+2025-06-02 21:56:09,911 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'ping -c 5 -W 1 10.0.0.11'
+
+2025-06-02 21:56:19,283 - root - INFO -   min/avg/max/mdev: 0.52/0.96/1.53/0.45 ms
+2025-06-02 21:56:19,283 - root - INFO - Testing latency: q2 -> q1
+2025-06-02 21:56:19,283 - root - INFO - *** [q2] QemuHost.cmd: Translated ping 'ping -c 5 -W 1 q1' to 'ping -c 5 -W 1 10.0.0.10'
+
+2025-06-02 21:56:19,283 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'ping -c 5 -W 1 10.0.0.10'
+
+2025-06-02 21:56:26,745 - root - INFO -   min/avg/max/mdev: 0.51/0.78/1.55/0.39 ms
+2025-06-02 21:56:26,745 - root - INFO - 
+=== Throughput Tests (iperf) ===
+2025-06-02 21:56:26,745 - root - INFO - Testing throughput: q1 -> q2
+2025-06-02 21:56:26,745 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'which iperf'
+
+2025-06-02 21:56:30,474 - root - INFO - *** [q2] SSH CMD='which iperf' FAILED. RC=1, STDOUT='', STDERR=''
+
+2025-06-02 21:56:30,474 - root - INFO - Installing iperf on q2
+2025-06-02 21:56:30,474 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'apt-get update && apt-get install -y iperf'
+
+2025-06-02 21:57:00,490 - root - INFO - *** [q2] TIMEOUT executing SSH cmd 'apt-get update && apt-get install -y iperf'.
+
+2025-06-02 21:57:00,491 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'pkill iperf'
+
+2025-06-02 21:57:05,962 - root - INFO - *** [q2] SSH CMD='pkill iperf' FAILED. RC=1, STDOUT='', STDERR=''
+
+2025-06-02 21:57:05,962 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'iperf -s -D'
+
+2025-06-02 21:57:11,092 - root - INFO - *** [q2] SSH CMD='iperf -s -D' FAILED. RC=127, STDOUT='', STDERR='bash: iperf: command not found'
+
+2025-06-02 21:57:12,092 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'iperf -c q2 -t 5 -J'
+
+2025-06-02 21:57:16,799 - root - INFO - *** [q1] SSH CMD='iperf -c q2 -t 5 -J' FAILED. RC=127, STDOUT='', STDERR='bash: iperf: command not found'
+
+2025-06-02 21:57:16,799 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'pkill iperf'
+
+2025-06-02 21:57:21,605 - root - INFO - *** [q2] SSH CMD='pkill iperf' FAILED. RC=1, STDOUT='', STDERR=''
+
+2025-06-02 21:57:21,605 - root - ERROR -   iperf failed (rc=127)
+2025-06-02 21:57:21,605 - system - ERROR -   iperf failed (rc=127)
+2025-06-02 21:57:21,605 - system - ERROR -   iperf failed (rc=127)
+2025-06-02 21:57:21,605 - root - INFO - Testing throughput: q2 -> q1
+2025-06-02 21:57:21,605 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'which iperf'
+
+2025-06-02 21:57:26,477 - root - INFO - *** [q1] SSH CMD='which iperf' FAILED. RC=1, STDOUT='', STDERR=''
+
+2025-06-02 21:57:26,478 - root - INFO - Installing iperf on q1
+2025-06-02 21:57:26,478 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'apt-get update && apt-get install -y iperf'
+
+2025-06-02 21:57:56,487 - root - INFO - *** [q1] TIMEOUT executing SSH cmd 'apt-get update && apt-get install -y iperf'.
+
+2025-06-02 21:57:56,487 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'pkill iperf'
+
+2025-06-02 21:57:59,065 - root - INFO - *** [q1] SSH CMD='pkill iperf' FAILED. RC=1, STDOUT='', STDERR=''
+
+2025-06-02 21:57:59,065 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'iperf -s -D'
+
+2025-06-02 21:58:01,449 - root - INFO - *** [q1] SSH CMD='iperf -s -D' FAILED. RC=127, STDOUT='', STDERR='bash: iperf: command not found'
+
+2025-06-02 21:58:02,449 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'iperf -c q1 -t 5 -J'
+
+2025-06-02 21:58:04,245 - root - INFO - *** [q2] SSH CMD='iperf -c q1 -t 5 -J' FAILED. RC=127, STDOUT='', STDERR='bash: iperf: command not found'
+
+2025-06-02 21:58:04,245 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'pkill iperf'
+
+2025-06-02 21:58:06,881 - root - INFO - *** [q1] SSH CMD='pkill iperf' FAILED. RC=1, STDOUT='', STDERR=''
+
+2025-06-02 21:58:06,881 - root - ERROR -   iperf failed (rc=127)
+2025-06-02 21:58:06,881 - system - ERROR -   iperf failed (rc=127)
+2025-06-02 21:58:06,881 - system - ERROR -   iperf failed (rc=127)
+2025-06-02 21:58:06,881 - root - INFO - 
+Performance test results saved to /home/shogun/Licenta/mininet/examples/qemu_mininet/logs/perf_topology_basic_lan.BasicLanTopo_20250602_215609.json
+
+2025-06-02 21:58:06,881 - root - INFO - 
+*** Running CLI
+
+2025-06-02 21:58:25,778 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'ip a'
+
+2025-06-02 21:59:01,061 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'cat /etc/resolv.conf'
+
+2025-06-02 21:59:39,310 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'ping -c1 8.8.8.8'
+
+2025-06-02 22:03:42,221 - mininet - Level 25 - *** Iperf: testing TCP bandwidth between q1 and q2 
+
+2025-06-02 22:03:42,221 - root - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'killall -9 iperf'
+
+2025-06-02 22:03:46,945 - root - INFO - *** [q2] SSH CMD='killall -9 iperf' FAILED. RC=1, STDOUT='', STDERR='iperf: no process found'
+
+2025-06-02 22:03:46,945 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'which telnet'
+
+2025-06-02 22:03:52,946 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'echo A | telnet -e A 10.0.0.11 5001'
+
+2025-06-02 22:03:57,191 - root - INFO - *** [q1] SSH CMD='echo A | telnet -e A 10.0.0.11 5001' FAILED. RC=1, STDOUT='Telnet escape character is 'A'.
+Trying 10.0.0.11...', STDERR='telnet: Unable to connect to remote host: Connection refused'
+
+2025-06-02 22:03:57,691 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'echo A | telnet -e A 10.0.0.11 5001'
+
+2025-06-02 22:04:01,781 - root - INFO - *** [q1] SSH CMD='echo A | telnet -e A 10.0.0.11 5001' FAILED. RC=1, STDOUT='Telnet escape character is 'A'.
+Trying 10.0.0.11...', STDERR='telnet: Unable to connect to remote host: Connection refused'
+
+2025-06-02 22:04:02,281 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'echo A | telnet -e A 10.0.0.11 5001'
+
+2025-06-02 22:04:06,488 - root - INFO - *** [q1] SSH CMD='echo A | telnet -e A 10.0.0.11 5001' FAILED. RC=1, STDOUT='Telnet escape character is 'A'.
+Trying 10.0.0.11...', STDERR='telnet: Unable to connect to remote host: Connection refused'
+
+2025-06-02 22:04:06,988 - root - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'echo A | telnet -e A 10.0.0.11 5001'
+
+2025-06-02 22:04:07,894 - mininet - Level 25 - 
+Interrupt
+
+2025-06-02 22:05:04,701 - root - INFO - *** Stopping network
+
+2025-06-02 22:05:04,701 - root - INFO - *** [s1] QemuSwitch: Stopping OVS bridge s1
+
+2025-06-02 22:05:04,796 - root - INFO - *** [q1] QemuHost: Terminating...
+
+2025-06-02 22:05:04,797 - root - INFO - *** [q1] Stopping QEMU...
+
+2025-06-02 22:05:04,797 - root - INFO - *** [q1] Killing QEMU process 587572 from PID file.
+
+2025-06-02 22:05:05,807 - root - INFO - *** [q1] Error with PID file /tmp/q1.pid: [Errno 2] No such file or directory: '/tmp/q1.pid'. May be already stopped or PID invalid.
+
+2025-06-02 22:05:05,807 - root - INFO - *** [q1] Cleaning up TAP tapb1 from bridge s1
+
+2025-06-02 22:05:05,888 - root - INFO - *** [q1] Deleting overlay image /tmp/qemu_basic1_overlay.qcow2
+
+2025-06-02 22:05:05,933 - root - INFO - *** [q2] QemuHost: Terminating...
+
+2025-06-02 22:05:05,934 - root - INFO - *** [q2] Stopping QEMU...
+
+2025-06-02 22:05:05,934 - root - INFO - *** [q2] Killing QEMU process 588686 from PID file.
+
+2025-06-02 22:05:06,945 - root - INFO - *** [q2] Error with PID file /tmp/q2.pid: [Errno 2] No such file or directory: '/tmp/q2.pid'. May be already stopped or PID invalid.
+
+2025-06-02 22:05:06,945 - root - INFO - *** [q2] Cleaning up TAP tapb2 from bridge s1
+
+2025-06-02 22:05:07,019 - root - INFO - *** [q2] Deleting overlay image /tmp/qemu_basic2_overlay.qcow2
+

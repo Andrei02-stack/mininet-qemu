@@ -1,0 +1,161 @@
+2025-06-01 20:41:40,655 - root - INFO - *** Starting Experiment: topology_basic_lan.BasicLanTopo ***
+
+2025-06-01 20:41:40,655 - system - DEBUG - Detailed experiment log started for topology_basic_lan.BasicLanTopo
+2025-06-01 20:41:40,655 - system - DEBUG - Detailed experiment log started for topology_basic_lan.BasicLanTopo
+2025-06-01 20:41:40,667 - root - INFO - *** Open vSwitch is running.
+
+2025-06-01 20:41:40,667 - system - DEBUG - Open vSwitch check successful
+2025-06-01 20:41:40,667 - system - DEBUG - Open vSwitch check successful
+2025-06-01 20:41:40,667 - mininet - DEBUG - *** errRun: ['grep', '-c', 'processor', '/proc/cpuinfo'] 
+
+2025-06-01 20:41:40,669 - mininet - DEBUG - 12
+  0
+2025-06-01 20:41:40,670 - mininet - DEBUG - *** Setting resource limits
+
+2025-06-01 20:41:40,670 - root - INFO - *** Building network topology
+
+2025-06-01 20:41:40,670 - system - DEBUG - Starting network topology build
+2025-06-01 20:41:40,670 - system - DEBUG - Starting network topology build
+2025-06-01 20:41:40,670 - mininet - INFO - *** Creating network
+
+2025-06-01 20:41:40,670 - mininet - INFO - *** Adding hosts:
+
+2025-06-01 20:41:40,671 - mininet - DEBUG - *** errRun: ['which', 'mnexec'] 
+
+2025-06-01 20:41:40,673 - mininet - DEBUG - /usr/bin/mnexec
+  0
+2025-06-01 20:41:40,673 - mininet - DEBUG - *** errRun: ['which', 'ifconfig'] 
+
+2025-06-01 20:41:40,675 - mininet - DEBUG - /usr/sbin/ifconfig
+  0
+2025-06-01 20:41:40,675 - mininet - DEBUG - _popen ['mnexec', '-cd', 'env', 'PS1=\x7f', 'bash', '--norc', '--noediting', '-is', 'mininet:q1'] 389142
+2025-06-01 20:41:40,687 - system - DEBUG - [q1] VM not booted. Command 'unset HISTFILE; stty -echo; set +m' IGNORED.
+2025-06-01 20:41:40,687 - system - DEBUG - [q1] VM not booted. Command 'unset HISTFILE; stty -echo; set +m' IGNORED.
+2025-06-01 20:41:40,687 - mininet - INFO - q1 
+2025-06-01 20:41:40,687 - mininet - DEBUG - _popen ['mnexec', '-cd', 'env', 'PS1=\x7f', 'bash', '--norc', '--noediting', '-is', 'mininet:q2'] 389143
+2025-06-01 20:41:40,700 - system - DEBUG - [q2] VM not booted. Command 'unset HISTFILE; stty -echo; set +m' IGNORED.
+2025-06-01 20:41:40,700 - system - DEBUG - [q2] VM not booted. Command 'unset HISTFILE; stty -echo; set +m' IGNORED.
+2025-06-01 20:41:40,700 - mininet - INFO - q2 
+2025-06-01 20:41:40,700 - mininet - INFO - 
+*** Adding switches:
+
+2025-06-01 20:41:40,700 - mininet - DEBUG - *** errRun: ['which', 'mnexec'] 
+
+2025-06-01 20:41:40,701 - mininet - DEBUG - /usr/bin/mnexec
+  0
+2025-06-01 20:41:40,702 - mininet - DEBUG - *** errRun: ['which', 'ifconfig'] 
+
+2025-06-01 20:41:40,703 - mininet - DEBUG - /usr/sbin/ifconfig
+  0
+2025-06-01 20:41:40,704 - mininet - DEBUG - _popen ['mnexec', '-cd', 'env', 'PS1=\x7f', 'bash', '--norc', '--noediting', '-is', 'mininet:s1'] 389146
+2025-06-01 20:41:40,717 - mininet - DEBUG - *** s1 : ('unset HISTFILE; stty -echo; set +m',)
+
+2025-06-01 20:41:40,717 - mininet - DEBUG - unset HISTFILE; stty -echo; set +m
+
+2025-06-01 20:41:40,719 - mininet - DEBUG - 
+2025-06-01 20:41:40,719 - mininet - DEBUG - 
+
+2025-06-01 20:41:40,719 - mininet - DEBUG - added intf lo (0) to node s1
+
+2025-06-01 20:41:40,720 - mininet - DEBUG - *** s1 : ('ifconfig', 'lo', 'up')
+
+2025-06-01 20:41:40,721 - mininet - DEBUG - 
+2025-06-01 20:41:40,721 - mininet - INFO - s1 
+2025-06-01 20:41:40,721 - mininet - INFO - 
+*** Adding links:
+
+2025-06-01 20:41:40,721 - mininet - INFO - 
+
+2025-06-01 20:41:40,721 - mininet - INFO - *** Configuring hosts
+
+2025-06-01 20:41:40,721 - mininet - INFO - q1 
+2025-06-01 20:41:40,722 - mininet - WARNING - *** defaultIntf: warning: q1 has no interfaces
+
+2025-06-01 20:41:40,722 - mininet - INFO - *** [q1] QemuHost: Mininet config() call. MAC=None, IP=None, defaultRoute=None
+
+2025-06-01 20:41:40,722 - mininet - INFO - *** [q1] QemuHost: VM not booted, ignoring 'ifconfig lo up' during Mininet config().
+
+2025-06-01 20:41:40,722 - mininet - INFO - q2 
+2025-06-01 20:41:40,722 - mininet - WARNING - *** defaultIntf: warning: q2 has no interfaces
+
+2025-06-01 20:41:40,722 - mininet - INFO - *** [q2] QemuHost: Mininet config() call. MAC=None, IP=None, defaultRoute=None
+
+2025-06-01 20:41:40,722 - mininet - INFO - *** [q2] QemuHost: VM not booted, ignoring 'ifconfig lo up' during Mininet config().
+
+2025-06-01 20:41:40,722 - mininet - INFO - 
+
+2025-06-01 20:41:40,722 - root - INFO - *** Starting network (switches, controllers)
+
+2025-06-01 20:41:40,722 - system - DEBUG - Starting network components
+2025-06-01 20:41:40,722 - system - DEBUG - Starting network components
+2025-06-01 20:41:40,722 - mininet - INFO - *** Starting controller
+
+2025-06-01 20:41:40,722 - mininet - INFO - 
+
+2025-06-01 20:41:40,722 - mininet - INFO - *** Starting 1 switches
+
+2025-06-01 20:41:40,722 - mininet - INFO - s1 
+2025-06-01 20:41:40,722 - mininet - INFO - *** [s1] QemuSwitch: Starting OVS bridge s1
+
+2025-06-01 20:41:40,743 - mininet - DEBUG - *** s1 : ('sudo ovs-vsctl --may-exist add-br', 's1')
+
+2025-06-01 20:41:40,778 - mininet - DEBUG - 
+2025-06-01 20:41:40,778 - mininet - DEBUG - *** s1 : ('sudo ip link set', 's1', 'up')
+
+2025-06-01 20:41:40,791 - mininet - DEBUG - 
+2025-06-01 20:41:40,791 - mininet - INFO - *** [s1] QemuSwitch.start: Skipping 'lo' interface.
+
+2025-06-01 20:41:40,791 - mininet - INFO - *** [s1] QemuSwitch: OVS bridge s1 started and interfaces processed.
+
+2025-06-01 20:41:40,791 - mininet - INFO - 
+
+2025-06-01 20:41:40,791 - root - WARNING - *** [q1] Not booted, skipping IP/route/firewall configuration.
+
+2025-06-01 20:41:40,791 - system - WARNING - *** [q1] Not booted, skipping IP/route/firewall configuration.
+
+2025-06-01 20:41:40,791 - system - WARNING - *** [q1] Not booted, skipping IP/route/firewall configuration.
+
+2025-06-01 20:41:40,791 - root - WARNING - *** [q2] Not booted, skipping IP/route/firewall configuration.
+
+2025-06-01 20:41:40,791 - system - WARNING - *** [q2] Not booted, skipping IP/route/firewall configuration.
+
+2025-06-01 20:41:40,791 - system - WARNING - *** [q2] Not booted, skipping IP/route/firewall configuration.
+
+2025-06-01 20:41:40,791 - root - INFO - *** Updating /etc/hosts in VMs for name resolution
+
+2025-06-01 20:41:40,792 - system - DEBUG - Starting /etc/hosts distribution
+2025-06-01 20:41:40,792 - system - DEBUG - Starting /etc/hosts distribution
+2025-06-01 20:41:40,792 - root - WARNING - *** [q1] Not booted, skipping /etc/hosts update.
+
+2025-06-01 20:41:40,792 - system - WARNING - *** [q1] Not booted, skipping /etc/hosts update.
+
+2025-06-01 20:41:40,792 - system - WARNING - *** [q1] Not booted, skipping /etc/hosts update.
+
+2025-06-01 20:41:40,792 - root - WARNING - *** [q2] Not booted, skipping /etc/hosts update.
+
+2025-06-01 20:41:40,792 - system - WARNING - *** [q2] Not booted, skipping /etc/hosts update.
+
+2025-06-01 20:41:40,792 - system - WARNING - *** [q2] Not booted, skipping /etc/hosts update.
+
+2025-06-01 20:41:42,792 - root - INFO - *** Testing initial connectivity to gateways (if applicable)...
+
+2025-06-01 20:41:42,792 - system - DEBUG - Starting connectivity tests
+2025-06-01 20:41:42,792 - system - DEBUG - Starting connectivity tests
+2025-06-01 20:41:42,792 - root - INFO - 
+*** Running CLI
+
+2025-06-01 20:41:42,792 - system - DEBUG - Starting Mininet CLI
+2025-06-01 20:41:42,792 - system - DEBUG - Starting Mininet CLI
+2025-06-01 20:41:42,792 - mininet - INFO - *** Starting CLI:
+
+2025-06-01 20:41:42,793 - mininet - DEBUG - *** errRun: ['stty', 'echo', 'sane', 'intr', '^C'] 
+
+2025-06-01 20:41:42,794 - mininet - DEBUG -   0
+2025-06-01 20:42:07,980 - mininet - Level 25 - available nodes are: 
+q1 q2 s1
+
+2025-06-01 20:42:14,044 - mininet - WARNING - *** defaultIntf: warning: q2 has no interfaces
+
+2025-06-01 20:42:14,044 - root - ERROR - Error: Class BasicLanTopo not found in module topologies.topology_basic_lan. Details: AttributeError("'NoneType' object has no attribute 'updateIP'")
+2025-06-01 20:42:14,044 - system - ERROR - Error: Class BasicLanTopo not found in module topologies.topology_basic_lan. Details: AttributeError("'NoneType' object has no attribute 'updateIP'")
+2025-06-01 20:42:14,044 - system - ERROR - Error: Class BasicLanTopo not found in module topologies.topology_basic_lan. Details: AttributeError("'NoneType' object has no attribute 'updateIP'")

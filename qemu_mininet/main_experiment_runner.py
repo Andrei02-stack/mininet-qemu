@@ -6,14 +6,15 @@ import argparse
 import traceback
 
 from mininet.net import Mininet
-from mininet.log import setLogLevel, info
 from mininet.link import TCLink
 from qemu_cli import QemuCLI as CLI # Or your custom CLI
+from logging_config import info, debug, error
 
 from qemu_mininet_components import (
     QemuHost, QemuSwitch, LinuxRouter,
     create_common_hosts_file, BASE_QEMU_IMAGE, MININET_HOSTS_FILE
 )
+from performance_tests import run_performance_tests
 
 def configure_vlan_ports(net, topo_obj):
     """Configure OVS port tags (on TAPs) and router sub-interfaces for VLANs."""
@@ -161,7 +162,6 @@ def create_common_hosts_file(nodes_for_hosts_file):
     return MININET_HOSTS_FILE
 
 def run_experiment(topo_class, topo_name="Experiment"):
-    setLogLevel('debug')
     info(f"*** Starting Experiment: {topo_name} ***\n")
 
     try:
@@ -324,10 +324,13 @@ def run_experiment(topo_class, topo_name="Experiment"):
             res, _, rc = q1.pexec(f'ping -c 2 -W 2 {q3.name}') # Ping by name
             info(f"*** {q1.name} ping {q3.name}: {'SUCCESSFUL' if rc == 0 else 'FAILED'}\n{res}\n")
 
-    info('\\n*** Running CLI\\n')
+    # Run performance tests (latency & throughput)
+    run_performance_tests(net, topo_name=topo_name)
+
+    info('\n*** Running CLI\n')
     CLI(net)
     
-    info('*** Stopping network\\n')
+    info('*** Stopping network\n')
     net.stop() # This will call terminate on QemuHosts, which calls stopQemu
 
 if __name__ == '__main__':

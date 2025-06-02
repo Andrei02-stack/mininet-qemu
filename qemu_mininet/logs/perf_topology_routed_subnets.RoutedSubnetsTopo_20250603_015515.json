@@ -1,0 +1,74 @@
+{
+  "timestamp": "20250603_015515",
+  "topology": "topology_routed_subnets.RoutedSubnetsTopo",
+  "latency": {
+    "q1": {
+      "q2": {
+        "min": 0.537,
+        "avg": 1.256,
+        "max": 3.523,
+        "mdev": 1.141
+      },
+      "q3": {
+        "min": 0.545,
+        "avg": 0.984,
+        "max": 1.852,
+        "mdev": 0.467
+      }
+    },
+    "q2": {
+      "q1": {
+        "min": 0.493,
+        "avg": 1.256,
+        "max": 2.011,
+        "mdev": 0.564
+      },
+      "q3": {
+        "min": 0.564,
+        "avg": 0.794,
+        "max": 1.254,
+        "mdev": 0.25
+      }
+    },
+    "q3": {
+      "q1": {
+        "min": 0.589,
+        "avg": 1.034,
+        "max": 1.5,
+        "mdev": 0.37
+      },
+      "q2": {
+        "min": 0.774,
+        "avg": 1.238,
+        "max": 1.793,
+        "mdev": 0.36
+      }
+    }
+  },
+  "throughput": {
+    "q1": {
+      "q2": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "q3": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    "q2": {
+      "q1": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "q3": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    "q3": {
+      "q1": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "q2": {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    }
+  }
+}

@@ -1,0 +1,370 @@
+2025-06-02 20:19:36,207 - mininet - INFO - *** Starting Experiment: topology_basic_lan.BasicLanTopo ***
+
+2025-06-02 20:19:36,219 - mininet - INFO - *** Open vSwitch is running.
+
+2025-06-02 20:19:36,220 - mininet - DEBUG - *** errRun: ['grep', '-c', 'processor', '/proc/cpuinfo'] 
+
+2025-06-02 20:19:36,223 - mininet - DEBUG - 12
+  0
+2025-06-02 20:19:36,223 - mininet - DEBUG - *** Setting resource limits
+
+2025-06-02 20:19:36,224 - mininet - INFO - *** Building network topology
+
+2025-06-02 20:19:36,224 - mininet - INFO - *** Creating network
+
+2025-06-02 20:19:36,224 - mininet - INFO - *** Adding hosts:
+
+2025-06-02 20:19:36,224 - mininet - DEBUG - *** errRun: ['which', 'mnexec'] 
+
+2025-06-02 20:19:36,226 - mininet - DEBUG - /usr/bin/mnexec
+  0
+2025-06-02 20:19:36,227 - mininet - DEBUG - *** errRun: ['which', 'ifconfig'] 
+
+2025-06-02 20:19:36,229 - mininet - DEBUG - /usr/sbin/ifconfig
+  0
+2025-06-02 20:19:36,229 - mininet - DEBUG - _popen ['mnexec', '-cd', 'env', 'PS1=\x7f', 'bash', '--norc', '--noediting', '-is', 'mininet:q1'] 528374
+2025-06-02 20:19:36,240 - mininet - INFO - *** [q1] VM not booted. Command 'unset HISTFILE; stty -echo; set +m' IGNORED.
+
+2025-06-02 20:19:36,240 - mininet - INFO - q1 
+2025-06-02 20:19:36,241 - mininet - DEBUG - _popen ['mnexec', '-cd', 'env', 'PS1=\x7f', 'bash', '--norc', '--noediting', '-is', 'mininet:q2'] 528375
+2025-06-02 20:19:36,252 - mininet - INFO - *** [q2] VM not booted. Command 'unset HISTFILE; stty -echo; set +m' IGNORED.
+
+2025-06-02 20:19:36,252 - mininet - INFO - q2 
+2025-06-02 20:19:36,252 - mininet - INFO - 
+*** Adding switches:
+
+2025-06-02 20:19:36,253 - mininet - DEBUG - *** errRun: ['which', 'mnexec'] 
+
+2025-06-02 20:19:36,254 - mininet - DEBUG - /usr/bin/mnexec
+  0
+2025-06-02 20:19:36,255 - mininet - DEBUG - *** errRun: ['which', 'ifconfig'] 
+
+2025-06-02 20:19:36,256 - mininet - DEBUG - /usr/sbin/ifconfig
+  0
+2025-06-02 20:19:36,256 - mininet - DEBUG - _popen ['mnexec', '-cd', 'env', 'PS1=\x7f', 'bash', '--norc', '--noediting', '-is', 'mininet:s1'] 528378
+2025-06-02 20:19:36,269 - mininet - DEBUG - *** s1 : ('unset HISTFILE; stty -echo; set +m',)
+
+2025-06-02 20:19:36,270 - mininet - DEBUG - unset HISTFILE; stty -echo; set +m
+
+2025-06-02 20:19:36,271 - mininet - DEBUG - 
+2025-06-02 20:19:36,272 - mininet - DEBUG - 
+
+2025-06-02 20:19:36,272 - mininet - DEBUG - added intf lo (0) to node s1
+
+2025-06-02 20:19:36,272 - mininet - DEBUG - *** s1 : ('ifconfig', 'lo', 'up')
+
+2025-06-02 20:19:36,273 - mininet - DEBUG - 
+2025-06-02 20:19:36,273 - mininet - INFO - s1 
+2025-06-02 20:19:36,273 - mininet - INFO - 
+*** Adding links:
+
+2025-06-02 20:19:36,274 - mininet - INFO - 
+
+2025-06-02 20:19:36,274 - mininet - INFO - *** Configuring hosts
+
+2025-06-02 20:19:36,274 - mininet - INFO - q1 
+2025-06-02 20:19:36,274 - mininet - WARNING - *** defaultIntf: warning: q1 has no interfaces
+
+2025-06-02 20:19:36,274 - mininet - INFO - *** [q1] QemuHost: Mininet config() call. MAC=None, IP=None, defaultRoute=None
+
+2025-06-02 20:19:36,274 - mininet - INFO - *** [q1] QemuHost: VM not booted, ignoring 'ifconfig lo up' during Mininet config().
+
+2025-06-02 20:19:36,274 - mininet - INFO - q2 
+2025-06-02 20:19:36,274 - mininet - WARNING - *** defaultIntf: warning: q2 has no interfaces
+
+2025-06-02 20:19:36,274 - mininet - INFO - *** [q2] QemuHost: Mininet config() call. MAC=None, IP=None, defaultRoute=None
+
+2025-06-02 20:19:36,274 - mininet - INFO - *** [q2] QemuHost: VM not booted, ignoring 'ifconfig lo up' during Mininet config().
+
+2025-06-02 20:19:36,274 - mininet - INFO - 
+
+2025-06-02 20:19:36,275 - mininet - INFO - *** Starting network (switches, controllers)
+
+2025-06-02 20:19:36,275 - mininet - INFO - *** Starting controller
+
+2025-06-02 20:19:36,275 - mininet - INFO - 
+
+2025-06-02 20:19:36,275 - mininet - INFO - *** Starting 1 switches
+
+2025-06-02 20:19:36,275 - mininet - INFO - s1 
+2025-06-02 20:19:36,275 - mininet - INFO - *** [s1] QemuSwitch: Starting OVS bridge s1
+
+2025-06-02 20:19:36,293 - mininet - DEBUG - *** s1 : ('sudo ovs-vsctl --may-exist add-br', 's1')
+
+2025-06-02 20:19:36,324 - mininet - DEBUG - 
+2025-06-02 20:19:36,324 - mininet - DEBUG - *** s1 : ('sudo ip link set', 's1', 'up')
+
+2025-06-02 20:19:36,333 - mininet - DEBUG - 
+2025-06-02 20:19:36,334 - mininet - INFO - *** [s1] QemuSwitch.start: Skipping 'lo' interface.
+
+2025-06-02 20:19:36,334 - mininet - INFO - *** [s1] QemuSwitch: OVS bridge s1 started and interfaces processed.
+
+2025-06-02 20:19:36,334 - mininet - INFO - 
+
+2025-06-02 20:19:36,334 - mininet - INFO - *** Starting QEMU hosts...
+
+2025-06-02 20:19:36,334 - mininet - INFO - *** Starting QEMU for q1 (TAP on s1)...
+
+2025-06-02 20:19:36,334 - mininet - INFO - *** [q1] Starting QEMU setup...
+
+2025-06-02 20:19:36,334 - mininet - INFO - *** [q1] Creating overlay image /tmp/qemu_basic1_overlay.qcow2 from /home/shogun/Licenta/imagine_qemu/qemu_image.qcow2
+
+2025-06-02 20:19:36,344 - mininet - INFO - *** [q1] Setting up TAP interface tapb1
+
+2025-06-02 20:19:36,459 - mininet - INFO - *** [q1] TAP tapb1 added to OVS bridge s1 imediat după creare.
+
+2025-06-02 20:19:36,459 - mininet - INFO - *** [q1] Starting QEMU: sudo qemu-system-x86_64 -daemonize -m 512 -hda /tmp/qemu_basic1_overlay.qcow2 -netdev user,id=netmgmt,hostfwd=tcp::2211-:22 -device e1000,netdev=netmgmt,mac=52:54:00:12:35:b1 -netdev tap,id=netexp,ifname=tapb1,script=no,downscript=no -device e1000,netdev=netexp,mac=52:54:00:B4:51:10 -pidfile /tmp/q1.pid
+
+2025-06-02 20:19:37,460 - mininet - INFO - *** [q1] Waiting for SSH on 127.0.0.1:2211 (up to 60 seconds)...
+
+2025-06-02 20:20:17,172 - mininet - INFO - *** [q1] SSH connection to 127.0.0.1:2211 successful!
+
+2025-06-02 20:20:17,172 - mininet - INFO - *** Starting QEMU for q2 (TAP on s1)...
+
+2025-06-02 20:20:17,172 - mininet - INFO - *** [q2] Starting QEMU setup...
+
+2025-06-02 20:20:17,172 - mininet - INFO - *** [q2] Creating overlay image /tmp/qemu_basic2_overlay.qcow2 from /home/shogun/Licenta/imagine_qemu/qemu_image.qcow2
+
+2025-06-02 20:20:17,178 - mininet - INFO - *** [q2] Setting up TAP interface tapb2
+
+2025-06-02 20:20:17,300 - mininet - INFO - *** [q2] TAP tapb2 added to OVS bridge s1 imediat după creare.
+
+2025-06-02 20:20:17,300 - mininet - INFO - *** [q2] Starting QEMU: sudo qemu-system-x86_64 -daemonize -m 512 -hda /tmp/qemu_basic2_overlay.qcow2 -netdev user,id=netmgmt,hostfwd=tcp::2212-:22 -device e1000,netdev=netmgmt,mac=52:54:00:12:35:b2 -netdev tap,id=netexp,ifname=tapb2,script=no,downscript=no -device e1000,netdev=netexp,mac=52:54:00:B4:51:11 -pidfile /tmp/q2.pid
+
+2025-06-02 20:20:18,301 - mininet - INFO - *** [q2] Waiting for SSH on 127.0.0.1:2212 (up to 60 seconds)...
+
+2025-06-02 20:21:04,651 - mininet - INFO - *** [q2] SSH connection to 127.0.0.1:2212 successful!
+
+2025-06-02 20:21:04,652 - mininet - INFO - *** Configuring IPs, routes, and firewall in VMs...
+
+2025-06-02 20:21:04,652 - mininet - INFO - --- Configuring q1 ---
+2025-06-02 20:21:04,652 - mininet - INFO - *** [q1] Attempting to set IP 10.0.0.10/24 on VM interface ens4
+
+2025-06-02 20:21:04,652 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): '/sbin/ip link show ens4'
+
+2025-06-02 20:21:12,851 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): '/sbin/ip addr flush dev ens4'
+
+2025-06-02 20:21:16,216 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): '/sbin/ip addr add 10.0.0.10/24 dev ens4'
+
+2025-06-02 20:21:19,392 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): '/sbin/ip link set ens4 up'
+
+2025-06-02 20:21:22,547 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): '/sbin/ip -4 addr show ens4 | grep 'inet 10.0.0.10/''
+
+2025-06-02 20:21:25,803 - mininet - INFO - *** [q1] IP 10.0.0.10/24 successfully set and verified on ens4.
+
+2025-06-02 20:21:25,803 - mininet - INFO - *** q1 IP set to 10.0.0.10/24, GW to None (if provided)
+
+2025-06-02 20:21:25,803 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'ip link set ens4 up'
+
+2025-06-02 20:21:29,012 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'ethtool -K ens4 gro off gso off tso off ufo off'
+
+2025-06-02 20:21:32,237 - mininet - INFO - *** [q1] Disabled offloading on ens4
+
+2025-06-02 20:21:32,238 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'iptables -F; iptables -P INPUT ACCEPT; iptables -P FORWARD ACCEPT; iptables -P OUTPUT ACCEPT'
+
+2025-06-02 20:21:35,494 - mininet - INFO - *** [q1] Set iptables to ACCEPT on q1
+
+2025-06-02 20:21:35,494 - mininet - INFO - --- Configuring q2 ---
+2025-06-02 20:21:35,494 - mininet - INFO - *** [q2] Attempting to set IP 10.0.0.11/24 on VM interface ens4
+
+2025-06-02 20:21:35,494 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): '/sbin/ip link show ens4'
+
+2025-06-02 20:21:41,434 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): '/sbin/ip addr flush dev ens4'
+
+2025-06-02 20:21:44,743 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): '/sbin/ip addr add 10.0.0.11/24 dev ens4'
+
+2025-06-02 20:21:48,079 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): '/sbin/ip link set ens4 up'
+
+2025-06-02 20:21:51,302 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): '/sbin/ip -4 addr show ens4 | grep 'inet 10.0.0.11/''
+
+2025-06-02 20:21:54,416 - mininet - INFO - *** [q2] IP 10.0.0.11/24 successfully set and verified on ens4.
+
+2025-06-02 20:21:54,416 - mininet - INFO - *** q2 IP set to 10.0.0.11/24, GW to None (if provided)
+
+2025-06-02 20:21:54,416 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'ip link set ens4 up'
+
+2025-06-02 20:21:57,466 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'ethtool -K ens4 gro off gso off tso off ufo off'
+
+2025-06-02 20:22:00,457 - mininet - INFO - *** [q2] Disabled offloading on ens4
+
+2025-06-02 20:22:00,457 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'iptables -F; iptables -P INPUT ACCEPT; iptables -P FORWARD ACCEPT; iptables -P OUTPUT ACCEPT'
+
+2025-06-02 20:22:03,600 - mininet - INFO - *** [q2] Set iptables to ACCEPT on q2
+
+2025-06-02 20:22:03,600 - mininet - INFO - *** Creating common /etc/hosts file for all nodes
+
+2025-06-02 20:22:03,600 - mininet - INFO - *** Created common hosts file at /tmp/mininet_hosts:
+127.0.0.1   localhost
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+# QEMU VM Data Plane IPs
+10.0.0.10	q1
+10.0.0.11	q2
+
+# Router Interface IPs
+
+# End of Mininet host entries
+
+2025-06-02 20:22:03,600 - mininet - INFO - *** Updating /etc/hosts in VMs for name resolution
+
+2025-06-02 20:22:03,600 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'touch /etc/hosts && chmod 644 /etc/hosts'
+
+2025-06-02 20:22:09,569 - mininet - INFO - *** [q1] Successfully copied hosts file to VM
+
+2025-06-02 20:22:09,569 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'touch /etc/hosts && chmod 644 /etc/hosts'
+
+2025-06-02 20:22:17,421 - mininet - INFO - *** [q2] Successfully copied hosts file to VM
+
+2025-06-02 20:22:19,421 - mininet - INFO - *** Testing initial connectivity to gateways (if applicable)...
+
+2025-06-02 20:22:19,421 - mininet - INFO - *** Testing q1 <-> q2 (same LAN)
+
+2025-06-02 20:22:19,421 - mininet - INFO - *** [q1] QemuHost.pexec: Running as blocking cmd: 'ping -c 2 -W 2 q2'
+
+2025-06-02 20:22:19,421 - mininet - INFO - *** [q1] QemuHost.cmd: Translated ping 'ping -c 2 -W 2 q2' to 'ping -c 2 -W 2 10.0.0.11'
+
+2025-06-02 20:22:19,421 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'ping -c 2 -W 2 10.0.0.11'
+
+2025-06-02 20:22:23,271 - mininet - INFO - *** q1 ping q2: SUCCESSFUL
+PING 10.0.0.11 (10.0.0.11) 56(84) bytes of data.
+64 bytes from 10.0.0.11: icmp_seq=1 ttl=64 time=6.20 ms
+64 bytes from 10.0.0.11: icmp_seq=2 ttl=64 time=0.505 ms
+
+--- 10.0.0.11 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.505/3.353/6.201/2.848 ms
+
+2025-06-02 20:22:23,271 - root - INFO - 
+=== Latency Tests (ping) ===
+2025-06-02 20:22:23,271 - root - INFO - Testing latency: q1 -> q2
+2025-06-02 20:22:23,271 - mininet - INFO - *** [q1] QemuHost.pexec: Running as blocking cmd: 'ping -c 5 -W 1 q2'
+
+2025-06-02 20:22:23,272 - mininet - INFO - *** [q1] QemuHost.cmd: Translated ping 'ping -c 5 -W 1 q2' to 'ping -c 5 -W 1 10.0.0.11'
+
+2025-06-02 20:22:23,272 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'ping -c 5 -W 1 10.0.0.11'
+
+2025-06-02 20:22:30,393 - root - INFO -   min/avg/max/mdev: 0.44/0.66/1.38/0.36 ms
+2025-06-02 20:22:30,393 - root - INFO - Testing latency: q2 -> q1
+2025-06-02 20:22:30,393 - mininet - INFO - *** [q2] QemuHost.pexec: Running as blocking cmd: 'ping -c 5 -W 1 q1'
+
+2025-06-02 20:22:30,393 - mininet - INFO - *** [q2] QemuHost.cmd: Translated ping 'ping -c 5 -W 1 q1' to 'ping -c 5 -W 1 10.0.0.10'
+
+2025-06-02 20:22:30,393 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'ping -c 5 -W 1 10.0.0.10'
+
+2025-06-02 20:22:37,441 - root - INFO -   min/avg/max/mdev: 0.52/1.89/6.30/2.23 ms
+2025-06-02 20:22:37,441 - root - INFO - 
+=== Throughput Tests (iperf3) ===
+2025-06-02 20:22:37,442 - root - INFO - Testing throughput: q1 -> q2
+2025-06-02 20:22:37,442 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'pkill iperf3'
+
+2025-06-02 20:22:40,855 - mininet - INFO - *** [q2] SSH CMD='pkill iperf3' FAILED. RC=1, STDOUT='', STDERR=''
+
+2025-06-02 20:22:40,855 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'iperf3 -s -D'
+
+2025-06-02 20:22:44,062 - mininet - INFO - *** [q2] SSH CMD='iperf3 -s -D' FAILED. RC=127, STDOUT='', STDERR='bash: iperf3: command not found'
+
+2025-06-02 20:22:45,062 - mininet - INFO - *** [q1] QemuHost.pexec: Running as blocking cmd: 'iperf3 -c q2 -t 5 -J'
+
+2025-06-02 20:22:45,062 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'iperf3 -c q2 -t 5 -J'
+
+2025-06-02 20:22:47,990 - mininet - INFO - *** [q1] SSH CMD='iperf3 -c q2 -t 5 -J' FAILED. RC=127, STDOUT='', STDERR='bash: iperf3: command not found'
+
+2025-06-02 20:22:47,990 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'pkill iperf3'
+
+2025-06-02 20:22:50,922 - mininet - INFO - *** [q2] SSH CMD='pkill iperf3' FAILED. RC=1, STDOUT='', STDERR=''
+
+2025-06-02 20:22:50,922 - root - ERROR -   iperf3 failed (rc=127)
+2025-06-02 20:22:50,922 - system - ERROR -   iperf3 failed (rc=127)
+2025-06-02 20:22:50,922 - system - ERROR -   iperf3 failed (rc=127)
+2025-06-02 20:22:50,922 - root - INFO - Testing throughput: q2 -> q1
+2025-06-02 20:22:50,922 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'pkill iperf3'
+
+2025-06-02 20:22:53,786 - mininet - INFO - *** [q1] SSH CMD='pkill iperf3' FAILED. RC=1, STDOUT='', STDERR=''
+
+2025-06-02 20:22:53,786 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'iperf3 -s -D'
+
+2025-06-02 20:22:56,771 - mininet - INFO - *** [q1] SSH CMD='iperf3 -s -D' FAILED. RC=127, STDOUT='', STDERR='bash: iperf3: command not found'
+
+2025-06-02 20:22:57,771 - mininet - INFO - *** [q2] QemuHost.pexec: Running as blocking cmd: 'iperf3 -c q1 -t 5 -J'
+
+2025-06-02 20:22:57,772 - mininet - INFO - *** [q2] QemuHost.cmd (to VM via SSH): 'iperf3 -c q1 -t 5 -J'
+
+2025-06-02 20:23:00,599 - mininet - INFO - *** [q2] SSH CMD='iperf3 -c q1 -t 5 -J' FAILED. RC=127, STDOUT='', STDERR='bash: iperf3: command not found'
+
+2025-06-02 20:23:00,599 - mininet - INFO - *** [q1] QemuHost.cmd (to VM via SSH): 'pkill iperf3'
+
+2025-06-02 20:23:03,406 - mininet - INFO - *** [q1] SSH CMD='pkill iperf3' FAILED. RC=1, STDOUT='', STDERR=''
+
+2025-06-02 20:23:03,406 - root - ERROR -   iperf3 failed (rc=127)
+2025-06-02 20:23:03,406 - system - ERROR -   iperf3 failed (rc=127)
+2025-06-02 20:23:03,406 - system - ERROR -   iperf3 failed (rc=127)
+2025-06-02 20:23:03,406 - root - INFO - 
+Performance test results saved to /home/shogun/Licenta/mininet/examples/qemu_mininet/logs/perf_20250602_202223.json
+
+2025-06-02 20:23:03,406 - mininet - INFO - 
+*** Running CLI
+
+2025-06-02 20:23:03,406 - mininet - INFO - *** Starting CLI:
+
+2025-06-02 20:23:03,414 - mininet - DEBUG - *** errRun: ['stty', 'echo', 'sane', 'intr', '^C'] 
+
+2025-06-02 20:23:03,415 - mininet - DEBUG -   0
+2025-06-02 20:27:02,632 - mininet - INFO - *** Stopping network
+
+2025-06-02 20:27:02,632 - mininet - INFO - *** Stopping 0 controllers
+
+2025-06-02 20:27:02,632 - mininet - INFO - 
+
+2025-06-02 20:27:02,632 - mininet - INFO - *** Stopping 0 links
+
+2025-06-02 20:27:02,633 - mininet - INFO - 
+
+2025-06-02 20:27:02,633 - mininet - INFO - *** Stopping 1 switches
+
+2025-06-02 20:27:02,633 - mininet - INFO - s1 
+2025-06-02 20:27:02,633 - mininet - INFO - *** [s1] QemuSwitch: Stopping OVS bridge s1
+
+2025-06-02 20:27:02,633 - mininet - DEBUG - *** s1 : ('sudo ovs-vsctl --if-exists del-br', 's1')
+
+2025-06-02 20:27:02,711 - mininet - DEBUG - 
+2025-06-02 20:27:02,711 - mininet - DEBUG - waiting for 528378 to terminate
+
+2025-06-02 20:27:02,712 - mininet - INFO - 
+
+2025-06-02 20:27:02,712 - mininet - INFO - *** Stopping 2 hosts
+
+2025-06-02 20:27:02,712 - mininet - INFO - q1 
+2025-06-02 20:27:02,712 - mininet - INFO - *** [q1] QemuHost: Terminating...
+
+2025-06-02 20:27:02,712 - mininet - INFO - *** [q1] Stopping QEMU...
+
+2025-06-02 20:27:02,712 - mininet - INFO - *** [q1] Killing QEMU process 528475 from PID file.
+
+2025-06-02 20:27:03,724 - mininet - INFO - *** [q1] Error with PID file /tmp/q1.pid: [Errno 2] No such file or directory: '/tmp/q1.pid'. May be already stopped or PID invalid.
+
+2025-06-02 20:27:03,724 - mininet - INFO - *** [q1] Cleaning up TAP tapb1 from bridge s1
+
+2025-06-02 20:27:03,807 - mininet - INFO - *** [q1] Deleting overlay image /tmp/qemu_basic1_overlay.qcow2
+
+2025-06-02 20:27:03,827 - mininet - DEBUG - waiting for 528374 to terminate
+
+2025-06-02 20:27:03,827 - mininet - INFO - q2 
+2025-06-02 20:27:03,827 - mininet - INFO - *** [q2] QemuHost: Terminating...
+
+2025-06-02 20:27:03,828 - mininet - INFO - *** [q2] Stopping QEMU...
+
+2025-06-02 20:27:03,828 - mininet - INFO - *** [q2] Killing QEMU process 528973 from PID file.
+
+2025-06-02 20:27:04,837 - mininet - INFO - *** [q2] Error with PID file /tmp/q2.pid: [Errno 2] No such file or directory: '/tmp/q2.pid'. May be already stopped or PID invalid.
+
+2025-06-02 20:27:04,837 - mininet - INFO - *** [q2] Cleaning up TAP tapb2 from bridge s1
+
+2025-06-02 20:27:04,923 - mininet - INFO - *** [q2] Deleting overlay image /tmp/qemu_basic2_overlay.qcow2
+
+2025-06-02 20:27:04,942 - mininet - DEBUG - waiting for 528375 to terminate
+
+2025-06-02 20:27:04,942 - mininet - INFO - 
+*** Done
+

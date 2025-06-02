@@ -1,0 +1,4 @@
+2025-06-03 01:43:07,698 - root - INFO - *** Starting Experiment: topology_routed_subnets.RoutedSubnetsTopo ***
+
+2025-06-03 01:43:07,708 - root - INFO - --- ERROR: Open vSwitch is not running or ovs-vsctl is not found. Please start it. ---
+

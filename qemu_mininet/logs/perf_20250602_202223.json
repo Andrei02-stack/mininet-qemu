@@ -1,0 +1,33 @@
+{
+  "timestamp": "20250602_202223",
+  "latency": {
+    "q1": {
+      "q2": {
+        "min": 0.439,
+        "avg": 0.655,
+        "max": 1.376,
+        "mdev": 0.361
+      }
+    },
+    "q2": {
+      "q1": {
+        "min": 0.523,
+        "avg": 1.89,
+        "max": 6.3,
+        "mdev": 2.23
+      }
+    }
+  },
+  "throughput": {
+    "q1": {
+      "q2": {
+        "error": "iperf3 failed (rc=127)"
+      }
+    },
+    "q2": {
+      "q1": {
+        "error": "iperf3 failed (rc=127)"
+      }
+    }
+  }
+}
